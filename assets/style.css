@@ -1,0 +1,311 @@
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.intro-text-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text-content h2 {
+    color: var(--white-color);
+    font-size: 2.3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);    
+}
+
+.intro-text-content img {
+    
+    width: 400px;
+    height: 400px;
+}
+
+/*Botão Aula Experimental */
+.btn-aulaExperimetal {
+    width: 250px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(44, 188, 99);
+    color: var(--white-color);
+}
+
+.btn-aulaExperimetal:hover {
+    background-color: rgb(14, 126, 57);
+}
+
+.btn-aulaExperimetal:focus {
+    outline: 2px dashed var(--white-color);
+    outline-offset: 4px;
+}
+
+
+/* Sobre Nós */
+.sobrenos-content {
+    max-width: 100rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.img-biografia {
+    padding: 1rem;
+    width: 350px;
+    height: 350px;
+    filter: blur();
+    border-radius: 30%;
+    
+}
+
+
+/* Galeria */
+
+.grid-one-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.gallery-img {
+    margin: 0 auto;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-1%, -1%) scale(1.05) rotate(3deg);
+}
+
+/* Videos*/
+
+.videos {
+    display: flex;
+    justify-content: center; /* Centraliza o vídeo */
+    margin: 20px 0;
+}
+
+.videos iframe {
+    width: 100%;
+    max-width: 560px; /* Define a largura máxima */
+    height: auto; /* Mantém a proporção do vídeo */
+    aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
+    border: none;
+}
+
+
+/* INICIO FOOTER*/
+
+.footer {   
+    text-align: center;
+    padding: 3rem;
+    gap: 2rem;
+    background-color: var(--first-color);
+    color: var(--light-color);
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center; /* Alinha os ícones no centro */
+    gap: 2rem; /* Espaçamento entre os ícones */
+    margin-bottom: 1rem; /* Espaço abaixo dos ícones */
+}
+
+.footer-icons i {    
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--light-color);
+}
+
+.footer img {
+    width: 18rem;
+    height: 14rem;
+}
+
+/* Button Spotify*/
+
+.btn-spotify {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+}
+
+.btn-spotify img {
+    max-width: 74px;
+    transition: transform 0.4s;
+}
+
+.btn-spotify img:hover {
+    transform: scale(1.1);
+}
+
+.btn-spotify .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 10px;
+    left: -144px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--white-color);
+    color: var(--second-color);
+    text-shadow: 0px 8px 15px rgba(118, 170, 248, 0.568);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-spotify:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+
+    .intro-content, .grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-img {
+        width: 100%;
+        max-width: 40rem;
+        height: 30rem;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
+
+    .grid-one-content {
+        display: block;
+    }  
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: transparent;
+        color: var(--light-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .menu-spacing {
+        display: none;
+    }
+
+    .footer {
+        padding: 2rem;
+        gap: 1rem;
+    }    
+
+    .footer-icons i {
+        font-size: 4rem;
+        /* Ajuste o tamanho dos ícones para dispositivos menores */
+    }
+
+    .footer img {
+        margin-top: 1rem;
+        width: 12rem;
+        height: 8rem;
+    }
+
+    .btn-spotify img {
+        max-width: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .img-biografia {
+        width: 300px;
+        height: 300px;
+    }
+
+    .gallery-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-icons i {
+        font-size: 3rem;
+    }
+
+    .btn-spotify img {
+        max-width: 54px;
+    }
+}
