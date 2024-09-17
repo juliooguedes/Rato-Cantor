@@ -130,8 +130,8 @@
 
 .footer {   
     text-align: center;
-    padding: 3rem;
-    gap: 2rem;
+    padding: 5rem;
+    gap: 3rem;
     background-color: var(--first-color);
     color: var(--light-color);
 }
@@ -146,6 +146,7 @@
 .footer-icons i {    
     text-decoration: none;
     cursor: pointer;
+    padding: 1rem;
     color: var(--light-color);
 }
 
