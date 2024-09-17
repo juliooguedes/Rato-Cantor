@@ -43,14 +43,14 @@
 /* Mídia Query para telas com largura máxima de 768px */
 @media screen and (max-width: 768px) {
     .main-bg {
-        background-image: linear-gradient(to bottom, rgba(3, 51, 110, 0.603), var(--first-color)), url('./img/fundo-small.jpg');
+        background-image: linear-gradient(to bottom, rgba(3, 51, 110, 0.603), var(--first-color)), url('./img/fundo.jpg');
         background-size: cover;
         background-position-x: center;
         min-width: 100%; /* Ajusta a largura mínima para 100% */
     }
 
     .gallery-bg {
-        background-image: linear-gradient(to bottom, rgba(3, 51, 110, 0.719), var(--first-color)), url('./img/julifest-small.webp');
+        background-image: linear-gradient(to bottom, rgba(3, 51, 110, 0.719), var(--first-color)), url('./img/julifest.webp');
         background-size: cover; /* Ajusta o tamanho para cobrir a tela */
         background-position: center; /* Alinha ao centro */
         min-width: 100%; /* Ajusta a largura mínima para 100% */
