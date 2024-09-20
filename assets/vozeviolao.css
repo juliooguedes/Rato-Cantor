@@ -1,0 +1,60 @@
+.intro-vozviolao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.intro-text-vozviolao {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.intro-text-vozviolao h3 {
+    margin-bottom: 2rem;
+    color: var(--white-color);    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);    
+}
+
+.intro-text-vozviolao h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--white-color);
+    font-size: 2.3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);    
+}
+.intro-text-vozviolao p {  
+    margin-top: 2rem;  
+    color: var(--white-color);
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);    
+}
+
+.intro-text-vozviolao img {    
+    width: 300px;
+    height: 300px;
+    border-radius: 30%;    
+}
+
+
+
+/*Botão Aula Experimental */
+.btn-vozviolao {
+    margin-top: 5rem;
+    width: 250px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(44, 188, 99);
+    color: var(--white-color);
+}
+
+.btn-vozviolao:hover {
+    background-color: rgb(14, 126, 57);
+}
+
+.btn-vozviolao:focus {
+    outline: 2px dashed var(--white-color);
+    outline-offset: 4px;
+}
