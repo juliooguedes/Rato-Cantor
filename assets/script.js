@@ -1,35 +1,52 @@
 AOS.init();
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Função para fechar o menu
-    const closeMenu = () => {
-        document.getElementById('close-menu').checked = false;
-    };
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    const menuLinks = document.querySelectorAll(".menu a"); // Links do menu
+    const submenuToggle = document.getElementById("submenu-toggle");
+    const submenuItems = document.getElementById("submenu-items");
+    const body = document.body;
 
-    // Seleciona todos os links dentro do menu
-    const menuLinks = document.querySelectorAll('#menu-links a');
+    // Função para abrir/fechar menu mobile
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("show");
+        body.classList.toggle("no-scroll"); // Impede rolagem ao abrir o menu
+    });
 
-    // Adiciona o evento de clique para cada link no menu
+    // Fechar menu ao clicar em qualquer link
     menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona o botão do submenu
-    const submenuToggle = document.querySelector('.submenu-toggle');
-    const submenuParent = submenuToggle.parentElement;
-
-    // Adiciona um evento de clique para mostrar/esconder o submenu
-    submenuToggle.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita comportamento padrão do link
-        submenuParent.classList.toggle('active'); // Alterna a classe 'active' para mostrar/esconder o submenu
+        link.addEventListener("click", function () {
+            menu.classList.remove("show");
+            body.classList.remove("no-scroll");
+        });
     });
 
-    // Fecha o submenu ao clicar fora dele
-    document.addEventListener('click', function(event) {
-        if (!submenuParent.contains(event.target) && !submenuToggle.contains(event.target)) {
-            submenuParent.classList.remove('active'); // Remove a classe 'active' se o clique for fora do submenu
+    // Alternar submenu
+    submenuToggle.addEventListener("click", function (event) {
+        event.stopPropagation(); // Evita fechamento imediato
+        submenuItems.classList.toggle("show");
+    });
+
+    // Fechar o submenu se clicar fora dele
+    document.addEventListener("click", function (event) {
+        if (!submenuToggle.contains(event.target) && !submenuItems.contains(event.target)) {
+            submenuItems.classList.remove("show");
         }
     });
+
+    // Fechar o menu ao clicar fora dele no mobile
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove("show");
+            body.classList.remove("no-scroll");
+        }
+    });
+
+        // Alterna o submenu
+        submenuToggle.addEventListener("click", function (event) {
+            event.stopPropagation(); // Evita fechar o menu ao clicar dentro dele
+            submenuItems.classList.toggle("show");
+            submenuItems.style.display = submenuItems.style.display === "block" ? "none" : "block";
+        });
 });

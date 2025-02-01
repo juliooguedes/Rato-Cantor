@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="icon" href="./assets/img/LOGO RATO.png" />
-    <meta name="description" content="Rato Cantor - Músicas que inspiram e emocionam. Entre em contato para shows e acompanhe as últimas novidades.">
+    <meta name="description"
+        content="Rato Cantor - Músicas que inspiram e emocionam. Entre em contato para shows e acompanhe as últimas novidades.">
     <meta name="keywords" content="música, cantor, spotify, Rato Cantor">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rato - Cantor</title>
@@ -34,29 +35,24 @@
 </head>
 
 <body>
-    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
-    <label class="close-menu-label" for="close-menu" title="close menu"></label>
-    <aside class="menu">
-        <div class="main-content menu-content">
-            <nav>
-                <ul id="menu-links">
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Sobre">Biografia</a></li>
-                    <li><a href="#gallery">Galeria</a></li>
-                    <li><a href="#videos">Vídeos</a></li>
-                    <li class="has-submenu"><a href="#" class="submenu-toggle">Contrate▿</a>
-                        <div class="sub-menu">
-                            <a href="vozeviolao.html">Voz e Violão</a>
-                            <a href="trio.html">Trio</a>
-                            <a href="bandaCompleta.html">Banda Completa</a>
-                        </div>                 
-                    </li>
+    <nav class="navbar">
+        <div class="logo"><img src="assets/img/LOGO RATO.png" alt=""></div>
+        <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="menu" id="menu">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Biografia">Biografia</a></li>
+            <li><a href="#Galeria">Galeria</a></li>
+            <li><a href="#Videos">Videos</a></li>
+            <li class="submenu" id="submenu">
+                <button class="submenu-toggle" id="submenu-toggle">Contrate ▼</button>
+                <ul class="submenu-items" id="submenu-items">
+                    <li><a href="vozeviolao.html">Voz e Violão</a></li>
+                    <li><a href="trio.html">Trio</a></li>
+                    <li><a href="bandaCompleta.html">Banda Completa</a></li>
                 </ul>
-            </nav>
-        </div>
-    </aside>
-
-    <div class="menu-spacing"></div>
+            </li>
+        </ul>
+    </nav>
 
     <section id="Home" class="intro main-bg section">
         <div class="main-content intro-content">
@@ -70,7 +66,7 @@
         </div>
     </section>
 
-    <section id="Sobre" class="first-bg section">
+    <section id="Biografia" class="first-bg section">
         <div class="main-content sobrenos-content">
             <h2>Biografia</h2>
             <p>Rato é um cantor e compositor que se destaca pela sua voz marcante e letras profundas. Com um estilo
@@ -83,7 +79,7 @@
     </section>
 
 
-    <section id="gallery" class="grid-one gallery-bg section">
+    <section id="Galeria" class="grid-one gallery-bg section">
         <div class="main-content grid-one-content">
             <h2 class="grid-main-heading">Nossa Galeria</h2>
             <p class="grid-description">Momentos especias vividos com voçês.</p>
@@ -100,10 +96,10 @@
                 </div>
 
             </div>
-        </div> 
+        </div>
 
-        <section id="videos" class="grid-one first-bg section">            
-                   
+        <section id="Videos" class="grid-one first-bg section">
+
             <div class="main-content grid-one-content">
                 <h2 class="grid-main-heading">Nossas Musicas</h2>
                 <p class="grid-description">Composições e regravações feitas especialmente para voçês!</p>
@@ -117,7 +113,8 @@
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="videos">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xfB2SzJC4Pg?si=vSb3nY7Q9XZcd4q3"
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/xfB2SzJC4Pg?si=vSb3nY7Q9XZcd4q3"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -130,46 +127,48 @@
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!--Footer-->
+        <!--Footer-->
 
 
-    <footer class="footer">
-        <div class="footer-icons">
-            <div class="footer-icons"></div>
-            <a href="https://www.youtube.com/@ratocantor" target="_blank" aria-label="Visite o canal do Rato no YouTube">
-                <i class="fa-brands fa-youtube fa-2x"></i>
-            </a>
-            <a href="https://www.instagram.com/ratocantor_oficial/" target="_blank" aria-label="Visite a pagina do Rato no Instagram">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-            </a>
+        <footer class="footer">
             <div class="footer-icons">
-                <a href="https://api.whatsapp.com/send?phone=5531971145940&text=Ola%20Rato!%0A%0AGostaria%20de%20agendar%20um%20show%20!"
-                    target="_blank" aria-label="Contrate o cantor Rato pelo whatsapp">
-                    <i class="fa-brands fa-whatsapp fa-2x"></i>
+                <div class="footer-icons"></div>
+                <a href="https://www.youtube.com/@ratocantor" target="_blank"
+                    aria-label="Visite o canal do Rato no YouTube">
+                    <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/ratocantor_oficial/" target="_blank"
+                    aria-label="Visite a pagina do Rato no Instagram">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+                <div class="footer-icons">
+                    <a href="https://api.whatsapp.com/send?phone=5531971145940&text=Ola%20Rato!%0A%0AGostaria%20de%20agendar%20um%20show%20!"
+                        target="_blank" aria-label="Contrate o cantor Rato pelo whatsapp">
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <a href="#Home">
+                    <img src="assets/img/LOGO RATO.png" alt="Logo Rato">
                 </a>
             </div>
-        </div>
-        <div class="footer-logo">
-            <a href="#Home">
-                <img src="assets/img/LOGO RATO.png" alt="Logo Rato">
-            </a>
-        </div>
 
-        <p>Copyrigth 2024 | Rato Cantor - Todos direitos reservados.</p>
-    </footer>
+            <p>Copyrigth 2024 | Rato Cantor - Todos direitos reservados.</p>
+        </footer>
 
-    <!-- Button Spotify -->
-    <a href="https://open.spotify.com/intl-pt/artist/2xiQCer4vInSY3ZgwgmjOK" class="btn-spotify" target="_blank"
-        data-aos="zoom-in-up" data-aos-delay="400">
-        <img class src="assets/img/spotify.svg" alt="icone Spotify">
-        <span class="tooltip-text">Ouça Agora!</span>
-    </a>
-    <script src="./assets/script.js"></script>
+        <!-- Button Spotify -->
+        <a href="https://open.spotify.com/intl-pt/artist/2xiQCer4vInSY3ZgwgmjOK" class="btn-spotify" target="_blank"
+            data-aos="zoom-in-up" data-aos-delay="400">
+            <img class src="assets/img/spotify.svg" alt="icone Spotify">
+            <span class="tooltip-text">Ouça Agora!</span>
+        </a>
+        <script src="./assets/script.js"></script>
 </body>
 
 </html>
